@@ -17,6 +17,6 @@ ENV MISE_INSTALL_PATH="/usr/local/bin/mise"
 ENV PATH="/mise/shims:$PATH"
 # ENV MISE_VERSION="..."
 
-RUN gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys 0x7413A06D \\
-    && curl https://mise.jdx.dev/install.sh.sig | gpg --decrypt > install.sh \\
+RUN gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys 0x7413A06D \
+    && curl https://mise.jdx.dev/install.sh.sig | gpg --decrypt > install.sh \
     && sh ./install.sh
