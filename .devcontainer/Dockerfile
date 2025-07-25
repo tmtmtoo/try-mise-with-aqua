@@ -1,12 +1,12 @@
 FROM mcr.microsoft.com/devcontainers/base:bullseye
 
-RUN apt-get update  \\
-    && apt-get -y --no-install-recommends install  \\
-    sudo \\
-    curl \\
-    git \\
-    ca-certificates \\
-    build-essential \\
+RUN apt-get update \
+    && apt-get -y --no-install-recommends install \
+    sudo \
+    curl \
+    git \
+    ca-certificates \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
